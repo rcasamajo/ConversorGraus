@@ -6,11 +6,11 @@ app.controller('myController', function($scope) {
     $scope.cel = 0;
     $scope.far = 32;
 
-    $scope.aFarenheit = function() {
-        return ($scope.cel*1.8)+32;
+    $scope.toFarenheit = function() {
+        $scope.far = ($scope.cel*1.8)+32;
     };
 
-    $scope.aCelcius = function() {
-        return ($scope.far-32)/1.8;
+    $scope.toCelcious = function() {
+        $scope.cel = ($scope.far-32)/1.8;
     };
 });
