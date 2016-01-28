@@ -5,12 +5,14 @@
 app.controller('myController', function($scope) {
     $scope.cel = 0;
     $scope.far = 32;
+    $scope.dir = "toF";
 
-    $scope.aFarenheit = function() {
-        return ($scope.cel*1.8)+32;
-    };
-
-    $scope.aCelcius = function() {
-        return ($scope.far-32)/1.8;
+    $scope.calc = function() {
+        if ($scope.dir == "toF") {
+            $scope.far = ($scope.cel * 1.8) + 32;
+        }
+        else {
+            $scope.cel = ($scope.far - 32) / 1.8;
+        }
     };
 });

@@ -8,11 +8,11 @@
 <body ng-app="myApp" ng-controller="myController">
 <h1>Conversor de graus</h1>
 
-<p>Celcius a Farenheit</p>
-<input type="text" ng-model="cel"> {{ aFarenheit() | number }}
+<p><input type="text" ng-model="cel" ng-change="calc()"> Celcious</p>
+<p><input type="text" ng-model="far" ng-change="calc()"> Farenheit</p>
 
-<p>Farenheit a Celcius</p>
-<input type="text" ng-model="far"> {{ aCelcius() | number }}
+<p><input type="radio" ng-model="dir" value="toF"> Celcius a Farenheit</p>
+<p><input type="radio" ng-model="dir" value="toC"> Farenheit a Celcius</p>
 
 
 <!-- Modules -->
